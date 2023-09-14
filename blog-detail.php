@@ -1,10 +1,23 @@
+<?php
+    require_once('php/connect.php');
+    $sql = "SELECT * FROM articles WHERE id = '".$_GET['id']."' ";
+    $result = $conn->query($sql) or die($conn->error);
+
+    if($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+        header('Location: blog.php');
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title><?php echo $row['subject']; ?></title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
@@ -18,10 +31,10 @@
 
     <!-- Page-Title -->
     <header data-jarallax='{ "speed": 0.6 }' class="jarallax"
-        style="background-image: url(https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80);">
+        style="background-image: url(<?php echo $row['image']; ?>);">
         <div class="blog-image">
-            <h1 class="display-4 font-weight-bold">Blog 1</h1>
-            <p class="lead">Lorem ipsum dolor sit amet.</p>
+            <h1 class="display-4 font-weight-bold"><?php echo $row['subject']; ?></h1>
+            <p class="lead"><?php echo $row['sub_title']; ?></p>
         </div>
     </header>
 
@@ -29,31 +42,11 @@
     <section class="container blog-content">
         <div class="row">
             <div class="col-12">
-                <h2>Lorem ipsum dolor sit,</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate dolore facilis facere
-                    labore amet hic, tenetur deleniti ducimus ipsum consectetur dolores enim reiciendis quos minus
-                    praesentium explicabo omnis. Corporis aperiam saepe enim, ea eos autem distinctio at fugit nisi
-                    consectetur ex, nulla officia excepturi consequuntur placeat sit tenetur dolorum.</p>
-                <h3>Lorem, ipsum dolor.</h3>
-                <ol>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                </ol>
-                <h3>Lorem, ipsum dolor.</h3>
-                <ol>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, delectus!</li>
-                </ol>
+                <?php echo $row['detail']; ?>
             </div>
             <div class="col-12">
                 <hr>
-                <p class="text-right text-muted">12 Sep 2023</p>
+                <p class="text-right text-muted"><?php echo date_format(new DateTime($row['update_at']), "j F Y") ?></p>
             </div>
             <div class="col-12">
                 <div class="owl-carousel owl-theme">

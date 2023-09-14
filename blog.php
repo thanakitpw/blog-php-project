@@ -66,7 +66,7 @@
                         <p class="card-text"><?php echo $row['sub_title']?></p>
                     </div>
                     <div class="p-3">
-                        <a href="blog-detail.php?<?php echo $row['id'] ?>" class="btn btn-primary btn-block">Read More</a>
+                        <a href="blog-detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-block">Read More</a>
                     </div>
                 </div>
             </section>
