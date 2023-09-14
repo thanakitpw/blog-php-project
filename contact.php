@@ -14,34 +14,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="/asset/image/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
-                Xperz Consult
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey"
-                aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarKey">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php') ?>
 
     <!-- Page-Title -->
     <header data-jarallax='{ "speed": 0.6 }' class="jarallax"
@@ -111,6 +84,10 @@
                                 <textarea class="form-control" name="message" id="message" cols="30" rows="10"
                                     placeholder="Enter your message"></textarea>
                             </div>
+                            <!-- Recaptcha -->
+                            <div id="recaptcha-wrapper" class="text-center my-2">
+                                <div class="g-recaptcha d-inline-block" data-callback="recaptchaCallback" data-sitekey="6LdpGRwoAAAAALskXvaEhICkd55Fd_XwuyMmS00G"></div>
+                              </div>
                             <button type="submit" class="btn btn-primary d-block mx-auto">Submit</button>
                         </form>
                     </div>
@@ -181,6 +158,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
     <script src="asset/js/main.js"></script>
 </body>

@@ -12,34 +12,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="/asset/image/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
-                Xperz Consult
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey"
-                aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarKey">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php') ?>
 
     <!-- Page-Title -->
     <header data-jarallax='{ "speed": 0.6 }' class="page-title jarallax" style="background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">

@@ -12,112 +12,55 @@
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="/asset/image/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
-                Xperz Consult
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey"
-                aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarKey">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php') ?>
 
-    <!-- Carousel -->
-    <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="carousel-img"
-                    style="background-image:url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=74be18f074e19e06a51221f0f09969df&auto=format&fit=crop&w=1280&q=80')">
-                    <div class="carousel-caption">
-                        <h1 class="display-4 font-weight-bold">Xperz Consult</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="backscreen"></div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img"
-                    style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-0.3.5&s=d8791fe0f9f4e735158400f9daf6a558&auto=format&fit=crop&w=1280&q=80')">
-                    <div class="carousel-caption">
-                        <h1 class="display-4 font-weight-bold">Xperz Consult</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="backscreen"></div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-img"
-                    style="background-image:url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-0.3.5&s=17460aa3d0fd3eb2fb7162edafc37175&auto=format&fit=crop&w=1280&q=80')">
-                    <div class="carousel-caption">
-                        <h1 class="display-4 font-weight-bold">Xperz Consult</h1>
-                        <p class="lead">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="backscreen"></div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </button>
-    </section>
-
-    <!-- Hope -->
-    <section class="jumbotron jumbotron-fluid text-center">
+    <!-- Page-Title -->
+    <header data-jarallax='{ "speed": 0.6 }' class="page-title jarallax" style="background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">
         <div class="container">
-            <h1 class="border-short-bottom">Lorem ipsum dolor sit amet.</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi architecto non nostrum nam
-                iste, tenetur voluptate vel beatae rem voluptates sapiente dolorem temporibus voluptatibus incidunt
-                mollitia accusantium, dignissimos nesciunt totam!</p>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 font-weight-bold">Blog</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </header>
 
     <!-- Blog -->
-    <section class="container">
-        <h1 class="border-short-bottom text-center">Blog</h1>
+    <section class="container py-5">
+        <div class="row pb-4">
+            <div class="col-12 text-center">
+                <div class="btn-group-custom">
+                    <a href="blog.php?tag=all">
+                        <button class="btn btn-primary active">All</button>
+                    </a>
+                    <a href="blog.php?tag=html">
+                        <button class="btn btn-primary active">All</button>
+                    </a>
+                    <button class="btn btn-primary">HTML</button>
+                    <button class="btn btn-primary">CSS</button>
+                    <button class="btn btn-primary">Javascript</button>
+                    <button class="btn btn-primary">PHP</button>
+                    <button class="btn btn-primary">MySQL</button>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <section class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="card h-100">
                     <a href="#" class="warpper-card-image">
-                        <img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2dyYW1tZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
                             class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Blog 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
                     </div>
                     <div class="p-3">
-                        <a href="#" class="btn btn-primary btn-block">Read More</a>
+                        <a href="blog-detail.php?id=001" class="btn btn-primary btn-block">Read More</a>
                     </div>
                 </div>
             </section>
@@ -125,7 +68,7 @@
             <section class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="card h-100">
                     <a href="#" class="warpper-card-image">
-                        <img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2dyYW1tZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
                             class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
@@ -272,6 +215,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
     <script src="asset/js/main.js"></script>
 </body>
 

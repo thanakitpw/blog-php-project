@@ -14,34 +14,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="/asset/image/logo.png" width="40" height="40" class="d-inline-block align-top" alt="">
-                Xperz Consult
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey"
-                aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarKey">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php') ?>
 
     <!-- Page-Title -->
     <header data-jarallax='{ "speed": 0.6 }' class="jarallax"
@@ -92,6 +65,10 @@
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the
+                                    card's content.</p>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of
                                     the
